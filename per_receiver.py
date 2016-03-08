@@ -44,7 +44,7 @@ l = StdOutListener()
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 stream = Stream(auth, l)
-stream_open = stream.filter(track=['Donald Trump', 'Ted Cruz', 'Hillary Clinton', 'Bernie Sanders','Jeb Bush', 'Ben Carson', 'Marco Rubio'], async=True)
+stream_open = stream.filter(track=['Donald Trump', 'Ted Cruz', 'Hillary Clinton', 'Bernie Sanders','John Kasich','Ben Carson', 'Marco Rubio'], async=True)
 
 
 
