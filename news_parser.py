@@ -48,10 +48,11 @@ def insert_article(news):
 
 
 
-
 import newspaper
-cnn_paper = newspaper.build('https://news.search.yahoo.com/search;_ylt=AwrSbg8sU59WVTwA3FJXNyoA;_ylu=X3oDMTB0NjZjZzZhBGNvbG8DZ3ExBHBvcwMxBHZ0aWQDBHNlYwNwaXZz?p=spacex&fr=uh3_magtech_web_gs&fr2=piv-web'
-                            , memoize_articles=False)
+#cnn_paper = newspaper.build('https://news.search.yahoo.com/search;_ylt=AwrSbg8sU59WVTwA3FJXNyoA;_ylu=X3oDMTB0NjZjZzZhBGNvbG8DZ3ExBHBvcwMxBHZ0aWQDBHNlYwNwaXZz?p=spacex&fr=uh3_magtech_web_gs&fr2=piv-web'
+                            # , memoize_articles=True)
+cnn_paper = newspaper.build('http://www.bing.com/news/search?q=spacex&go=Submit&qs=n&form=QBLH&scope=news&pq=spacex&sc=8-6&sp=-1&sk=&cvid=41BAF87FCCE043A99A665BDDBB5F9111'
+                            , memoize_articles=True)
 for article in cnn_paper.articles:
     article.download()
     article.parse()
